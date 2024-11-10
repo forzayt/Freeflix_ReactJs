@@ -10,6 +10,10 @@ const Header = () => {
                 <Link to="/movies/popular" style={{textDecoration: "none"}}><span>Popular</span></Link>
                 <Link to="/movies/top_rated" style={{textDecoration: "none"}}><span>Top Rated</span></Link>
                 <Link to="/movies/upcoming" style={{textDecoration: "none"}}><span>Upcoming</span></Link>
+                <a href="https://github.com/vishnu1100/React.js-IMDB-movie-website" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none",color:"white",fontSize:20 }}>Contribute</a>
+
+               
+                
             </div>
         </div>
     )
