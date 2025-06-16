@@ -33,13 +33,7 @@ class WatchNow extends Component {
               />
               <div className="cards__overlay">
                 <div className="card__title">{movie.title}</div>
-                <div className="card__runtime">
-                  {movie.year}
-                  <span className="card__rating">{movie.genre}</span>
-                </div>
-                <div className="card__description">
-                  {movie.description.slice(0, 118) + "..."}
-                </div>
+                <div className="card__runtime">{movie.year}</div>
               </div>
             </div>
           ))}
