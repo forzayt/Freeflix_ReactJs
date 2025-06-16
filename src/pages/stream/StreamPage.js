@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
-import '@videojs/themes/dist/fantasy/index.css';
 import movieData from '../../data/movies.json';
 import './StreamPage.css';
 
@@ -25,19 +24,7 @@ class StreamPage extends Component {
           preload: 'auto',
           fluid: true,
           responsive: true,
-          playbackRates: [0.5, 1, 1.5, 2],
-          controlBar: {
-            children: [
-              'playToggle',
-              'volumePanel',
-              'progressControl',
-              'currentTimeDisplay',
-              'timeDivider',
-              'durationDisplay',
-              'playbackRateMenuButton',
-              'fullscreenToggle'
-            ]
-          }
+          playbackRates: [0.5, 1, 1.5, 2]
         });
       });
     }
@@ -68,7 +55,7 @@ class StreamPage extends Component {
           <div data-vjs-player>
             <video
               ref={this.playerRef}
-              className="video-js vjs-theme-fantasy vjs-big-play-centered"
+              className="video-js vjs-big-play-centered"
               playsInline
             >
               <source src={movie.streamUrl} type="video/mp4" />

@@ -112,14 +112,18 @@
     line-height: 1.6;
 }
 
-/* Video.js custom styles */
+/* Video.js container */
 .video-js {
     width: 100%;
     aspect-ratio: 16/9;
-    position: relative;
 }
 
-/* Add gradient overlay */
+/* Hide the video.js loading spinner */
+.video-js .vjs-loading-spinner {
+    display: none;
+}
+
+/* Video.js custom styles */
 .video-js::before {
     content: '';
     position: absolute;
@@ -176,11 +180,11 @@
 }
 
 .video-js .vjs-play-progress {
-    background-color: #ffd700;
+    background-color: #4CAF50;
 }
 
 .video-js .vjs-volume-level {
-    background-color: #ffd700;
+    background-color: #4CAF50;
 }
 
 .video-js .vjs-progress-control {
@@ -204,13 +208,46 @@
     z-index: 1001;
 }
 
+/* Custom time display */
+.vjs-custom-time-display {
+    color: #fff;
+    font-size: 1.2em;
+    padding: 0 0.5em;
+    display: flex;
+    align-items: center;
+}
+
 /* Show controls on hover */
 .video-js:hover .vjs-control-bar {
     opacity: 1;
     visibility: visible;
 }
 
+/* Forest theme customizations */
 /* Hide the video.js loading spinner */
 .video-js .vjs-loading-spinner {
     display: none;
+}
+
+/* Forest theme customizations */
+.video-js.vjs-theme-forest {
+    --vjs-theme-forest--primary: #4CAF50;
+    --vjs-theme-forest--secondary: #fff;
+}
+
+.video-js.vjs-theme-forest .vjs-big-play-button {
+    background-color: rgba(76, 175, 80, 0.8);
+    border: none;
+}
+
+.video-js.vjs-theme-forest .vjs-big-play-button:hover {
+    background-color: rgba(76, 175, 80, 1);
+}
+
+.video-js.vjs-theme-forest .vjs-control-bar {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.video-js.vjs-theme-forest .vjs-button > .vjs-icon-placeholder:before {
+    color: #fff;
 } 
