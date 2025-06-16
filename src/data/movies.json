@@ -2,9 +2,9 @@
   "movies": [
     {
       "id": 1,
-      "title": "Sample Movie 1",
-      "year": "2024",
-      "poster": "https://image.tmdb.org/t/p/original/1E5baAaEse26fej7uHcjOgEE2t2.jpg",
+      "title": "Mukundan Unni Associates",
+      "year": "2022",
+      "poster": "https://m.media-amazon.com/images/M/MV5BYjlkZWQ1ZWQtY2QyZi00ZDg3LThiOWYtNDgxZGNjY2U3ZGIzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
       "streamUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     },
     {
