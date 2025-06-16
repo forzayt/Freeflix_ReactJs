@@ -86,3 +86,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 
+## ✅ Easiest & Fastest Way: Use FFmpeg (No Re-encoding)
+- This will convert .mkv to .mp4 instantly without changing quality.
+
+- 🛠 Command:
+- bash
+- Copy
+- Edit
+- ffmpeg -i input.mkv -c copy output.mp4
+- -c copy tells FFmpeg to copy the video and audio without re-encoding — fast and lossless.
