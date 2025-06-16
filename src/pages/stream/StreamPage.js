@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import videojs from 'video.js';
+import 'video.js/dist/video-js.css';
+import '@videojs/themes/dist/fantasy/index.css';
 import movieData from '../../data/movies.json';
 import './StreamPage.css';
 
@@ -7,72 +10,70 @@ class StreamPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movie: null,
-      isPlaying: false,
-      isFullscreen: false
+      movie: null
     };
+    this.playerRef = React.createRef();
   }
 
   componentDidMount() {
     const movie = movieData.movies.find(m => m.id === parseInt(this.props.movieId));
     if (movie) {
-      this.setState({ movie });
+      this.setState({ movie }, () => {
+        this.player = videojs(this.playerRef.current, {
+          controls: true,
+          autoplay: true,
+          preload: 'auto',
+          fluid: true,
+          responsive: true,
+          playbackRates: [0.5, 1, 1.5, 2],
+          controlBar: {
+            children: [
+              'playToggle',
+              'volumePanel',
+              'progressControl',
+              'currentTimeDisplay',
+              'timeDivider',
+              'durationDisplay',
+              'playbackRateMenuButton',
+              'fullscreenToggle'
+            ]
+          }
+        });
+      });
     }
   }
 
-  togglePlayPause = () => {
-    this.setState({ isPlaying: !this.state.isPlaying });
-    const video = document.getElementById('movie-player');
-    if (this.state.isPlaying) {
-      video.pause();
-    } else {
-      video.play();
+  componentWillUnmount() {
+    if (this.player) {
+      this.player.dispose();
     }
-  };
-
-  toggleFullscreen = () => {
-    const video = document.getElementById('movie-player');
-    if (!document.fullscreenElement) {
-      video.requestFullscreen();
-      this.setState({ isFullscreen: true });
-    } else {
-      document.exitFullscreen();
-      this.setState({ isFullscreen: false });
-    }
-  };
+  }
 
   render() {
-    const { movie, isPlaying } = this.state;
+    const { movie } = this.state;
 
     if (!movie) {
       return <div className="stream-container">Movie not found</div>;
     }
 
     return (
-      <div className="stream-container">
-        <div className="video-container">
-          <video
-            id="movie-player"
-            src={movie.streamUrl}
-            className="video-player"
-            controls={false}
-            onClick={this.togglePlayPause}
-          />
-          <div className="video-controls">
-            <button onClick={this.togglePlayPause} className="control-button">
-              {isPlaying ? '⏸️' : '▶️'}
-            </button>
-            <button onClick={this.toggleFullscreen} className="control-button">
-              {this.state.isFullscreen ? '⤓' : '⤢'}
-            </button>
-          </div>
-        </div>
-
-        <div className="movie-info">
+      <div className="stream-page">
+        <div className="stream-header">
+          <button className="back-button" onClick={this.props.onBack}>
+            ← Back
+          </button>
           <h1 className="movie-title">{movie.title}</h1>
-          <p className="movie-year">{movie.year}</p>
-          <p className="movie-genre">{movie.genre}</p>
-          <p className="movie-description">{movie.description}</p>
+        </div>
+        <div className="stream-container">
+          <div data-vjs-player>
+            <video
+              ref={this.playerRef}
+              className="video-js vjs-theme-fantasy vjs-big-play-centered"
+              playsInline
+            >
+              <source src={movie.streamUrl} type="video/mp4" />
+            </video>
+          </div>
         </div>
       </div>
     );
@@ -82,7 +83,8 @@ class StreamPage extends Component {
 // Wrapper component to use useParams hook
 const StreamPageWrapper = (props) => {
   const { id } = useParams();
-  return <StreamPage {...props} movieId={id} />;
+  const navigate = useNavigate();
+  return <StreamPage {...props} movieId={id} onBack={() => navigate(-1)} />;
 };
 
 export default StreamPageWrapper; 
