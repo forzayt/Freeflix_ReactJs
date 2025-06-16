@@ -84,12 +84,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Create React App](https://create-react-app.dev/) for the project setup
 - All contributors who have helped improve this project
 
-## Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
-
-Project Link: [https://github.com/yourusername/React.js-IMDB-movie-website](https://github.com/yourusername/React.js-IMDB-movie-website)
-
----
-
-Made with ❤️ by [Your Name]
