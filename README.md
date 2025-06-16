@@ -95,3 +95,25 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Edit
 - ffmpeg -i input.mkv -c copy output.mp4
 - -c copy tells FFmpeg to copy the video and audio without re-encoding — fast and lossless.
+
+
+## Reopen CMD and check:
+bash
+Copy
+Edit
+ia --version
+- ✅ Configure IA Upload
+Now configure your archive.org credentials:
+
+bash
+Copy
+Edit
+ia configure
+- ✅ Upload a file
+bash
+Copy
+Edit
+ia upload my-video-identifier path\to\yourfile.mp4 \
+  --metadata="title:My Video" \
+  --metadata="mediatype:movies" \
+  --metadata="collection:opensource_movies"
