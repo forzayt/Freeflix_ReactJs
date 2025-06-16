@@ -1,0 +1,58 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "The Adventure Begins",
+      "year": "2024",
+      "genre": "Action, Adventure",
+      "description": "A thrilling adventure movie that takes you on an exciting journey through uncharted territories.",
+      "poster": "https://picsum.photos/200/300",
+      "streamUrl": "https://example.com/stream1.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Mystery of the Night",
+      "year": "2023",
+      "genre": "Drama, Mystery",
+      "description": "A gripping mystery that will keep you on the edge of your seat until the very end.",
+      "poster": "https://picsum.photos/200/301",
+      "streamUrl": "https://example.com/stream2.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Love in Paris",
+      "year": "2024",
+      "genre": "Romance, Drama",
+      "description": "A beautiful love story set in the romantic streets of Paris.",
+      "poster": "https://picsum.photos/200/302",
+      "streamUrl": "https://example.com/stream3.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Future World",
+      "year": "2023",
+      "genre": "Sci-Fi, Action",
+      "description": "A sci-fi epic that explores the possibilities of future technology and human evolution.",
+      "poster": "https://picsum.photos/200/303",
+      "streamUrl": "https://example.com/stream4.mp4"
+    },
+    {
+      "id": 5,
+      "title": "The Last Stand",
+      "year": "2024",
+      "genre": "Action, Thriller",
+      "description": "An intense action thriller about one man's fight against impossible odds.",
+      "poster": "https://picsum.photos/200/304",
+      "streamUrl": "https://example.com/stream5.mp4"
+    },
+    {
+      "id": 6,
+      "title": "Comedy Night",
+      "year": "2023",
+      "genre": "Comedy",
+      "description": "A hilarious comedy that will have you laughing from start to finish.",
+      "poster": "https://picsum.photos/200/305",
+      "streamUrl": "https://example.com/stream6.mp4"
+    }
+  ]
+} 

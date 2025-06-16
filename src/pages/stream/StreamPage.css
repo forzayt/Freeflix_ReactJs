@@ -1,0 +1,81 @@
+.stream-container {
+    padding: 20px;
+    background-color: #1a1a1a;
+    min-height: 100vh;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-player {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #000;
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+.control-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.control-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.movie-info {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 12px;
+}
+
+.movie-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.movie-year {
+    color: #b3b3b3;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.movie-genre {
+    color: #ffd700;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.movie-description {
+    color: #b3b3b3;
+    font-size: 16px;
+    line-height: 1.6;
+} 
