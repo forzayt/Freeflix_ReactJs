@@ -13,6 +13,62 @@
       "year": "2003",
       "poster": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/c.i.d.-moosa-iemv006245-24-03-2017-17-18-17.jpg",
       "streamUrl": "https://archive.org/download/cidmoosa/cidmoosa.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Ulakam Chuttum Valiban",
+      "year": "2011",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/2/21/Ulakam-Chuttum-Valiban.jpg",
+      "streamUrl": " "
+    },
+    {
+      "id": 4,
+      "title": "Trance",
+      "year": "2020",
+      "poster": "https://m.media-amazon.com/images/M/MV5BZTA1NjBmNmMtM2Y5YS00Yjg4LWI5ZjMtYjM5N2NlODhlNWEyXkEyXkFqcGc@._V1_.jpg",
+      "streamUrl": " "
+    },
+    {
+      "id": 5,
+      "title": "Guruvayoor Ambalanadayil",
+      "year": "2024",
+      "poster": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-AgmgZc6Xgmk1mXDuJhcnXtyt_Siuk_-tS0n0VWVuNe9Z0r5mXXBUnKLSAzKdcySQiTh47fzXbj3R8vMYQjouvn9_XznvK5-WPClFngo",
+      "streamUrl": " "
+    },
+    {
+      "id": 6,
+      "title": "Chathikkatha Chanthu",
+      "year": "2004",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/a/ac/Chathikkatha_Chanthu.jpg",
+      "streamUrl": " "
+    },
+    {
+      "id": 7,
+      "title": "Lucifer",
+      "year": "2019",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pVozzCoHwpFHmafvI-zgp3uo8R9s7tnYBuqEhVFpDS4roExbmFTMLz7VwpQRRRa-UeIg",
+      "streamUrl": " "
+    },
+    {
+      "id": 8,
+      "title": "Vikram",
+      "year": "2022",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/9/93/Vikram_2022_poster.jpg",
+      "streamUrl": " "
+    },
+    {
+      "id": 9,
+      "title": "Ayyappanum Koshiyum",
+      "year": "2020",
+      "poster": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQeYPyFF28_HwpJTXpQCbMjtMjTeDVgeGxfS5m_6zu7goB9OVunmyDXcd-ZVHt6My71b3prLQ",
+      "streamUrl": " "
+    },
+    {
+      "id": 10,
+      "title": "Adi Kapyare Kootamani",
+      "year": "2015",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Adi_koottamani.jpg/250px-Adi_koottamani.jpg",
+      "streamUrl": " "
     }
   ]
 } 
