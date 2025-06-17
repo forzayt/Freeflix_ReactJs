@@ -84,36 +84,44 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Create React App](https://create-react-app.dev/) for the project setup
 - All contributors who have helped improve this project
 
+## Using FFmpeg for Video Conversion
 
+### Converting MKV to MP4
 
-## ✅ Easiest & Fastest Way: Use FFmpeg (No Re-encoding)
-- This will convert .mkv to .mp4 instantly without changing quality.
+To convert `.mkv` files to `.mp4` instantly without quality loss:
 
-- 🛠 Command:
-- bash
-- Copy
-- Edit
-- ffmpeg -i input.mkv -c copy output.mp4
-- -c copy tells FFmpeg to copy the video and audio without re-encoding — fast and lossless.
+```bash
+ffmpeg -i input.mkv -c copy output.mp4
+```
 
+The `-c copy` flag tells FFmpeg to copy the video and audio without re-encoding, making the process fast and lossless.
 
-## Reopen CMD and check:
-bash
-Copy
-Edit
+### Internet Archive Upload Instructions
+
+1. Check the IA version:
+```bash
 ia --version
-- ✅ Configure IA Upload
-Now configure your archive.org credentials:
+```
 
-bash
-Copy
-Edit
+2. Configure your archive.org credentials:
+```bash
 ia configure
-- ✅ Upload a file
-bash
-Copy
-Edit
-ia upload my-video-identifier path\to\yourfile.mp4 \
+```
+
+3. Upload a file:
+```bash
+ia upload my-video-identifier path/to/yourfile.mp4 \
   --metadata="title:My Video" \
   --metadata="mediatype:movies" \
   --metadata="collection:opensource_movies"
+```
+
+## If Upload Fails Midway
+
+If the upload process fails midway, you can simply re-run the same command. Internet Archive won't re-upload the completed chunks, especially if it's the same filename and identifier.
+
+### For WSL (Linux) Users
+
+```bash
+ia upload name input.mp4 --retries 20 --verbose
+```
