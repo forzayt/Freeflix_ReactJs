@@ -3,7 +3,7 @@ import "./movieList.css"
 import { useParams } from "react-router-dom"
 import Cards from "../card/card"
 
-const MovieList = () => {
+const MovieList = ({ setBackgroundImage }) => {
     
     const [movieList, setMovieList] = useState([])
     const {type} = useParams()
@@ -28,7 +28,7 @@ const MovieList = () => {
             <div className="list__cards">
                 {
                     movieList.map(movie => (
-                        <Cards movie={movie} />
+                        <Cards key={movie.id} movie={movie} setBackgroundImage={setBackgroundImage} />
                     ))
                 }
             </div>
