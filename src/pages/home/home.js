@@ -18,7 +18,7 @@ const Home = ({ setBackgroundImage }) => {
     return (
         <>
             <div className="poster">
-                <Carousel
+                {/* <Carousel
                     showThumbs={false}
                     autoPlay={true}
                     transitionTime={3}
@@ -49,7 +49,7 @@ const Home = ({ setBackgroundImage }) => {
                             </Link>
                         ))
                     }
-                </Carousel>
+                </Carousel> */}
                 <MovieList setBackgroundImage={setBackgroundImage} />
             </div>
         </>
